@@ -8,6 +8,7 @@
     <router-link :to="{name: 'login'}">login</router-link>
   </li>
 </ul>
+<router-view></router-view>
 </template>
 
 <script setup>
