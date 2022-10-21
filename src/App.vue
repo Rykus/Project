@@ -5,7 +5,7 @@
     <router-link :to="{name: 'Login'}">Inicio de sesión</router-link>
   </li>
   <li>
-    <router-link :to="{name: 'SingIn'}">Registro de cuenta</router-link>
+    <router-link :to="{name: 'Singup'}">Registro de cuenta</router-link>
   </li>
 </ul>
 

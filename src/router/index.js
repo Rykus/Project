@@ -12,20 +12,17 @@ const routes = [
             component: () => import ('../views/LogIn.vue'),
         },
         {
-            path: 'SingIn',
-            name: 'SingIn',
-            component: () => import ('../views/SingIn.vue'),
+            path: 'Singup',
+            name: 'Singup',
+            component: () => import ('../views/SingUp.vue'),
         },
     ]
     },
-
-
-
     {
-        path: '/SingIn',
-        name: 'SingIn',
-        component: () => import ('../views/SingIn.vue')
-    },
+        path: '/posit',
+        name: 'posit',
+        component: () => import ('../views/Posit.vue'),
+    }
 ]
 
 const router = createRouter({
