@@ -49,4 +49,5 @@ export const deleteTask = async (taskId) => {
 
 export const logOut = async () => {
     const response = await supabase.auth.signOut()
+    
 }

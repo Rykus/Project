@@ -7,6 +7,9 @@
   <li>
     <router-link :to="{name: 'Singup'}">Registro de cuenta</router-link>
   </li>
+  <li>
+    <router-link :to="{name: 'posit'}">Pagina de task</router-link>
+  </li>
 </ul>
 
 <!-- EL rollo es meter 2 views aqui, una con la pagina inicial y otra con los post its
@@ -26,23 +29,6 @@ import { onMounted } from '@vue/runtime-core'
 const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_KEY)
 console.log(supabase)
 
-const registro = async () =>{
-  const result = supabase.auth.signUp({
-    email: 'blanco.jimenez.1992@gmail.com',
-    password: '123456',
-})
-console.log (result)
-}
-
-const user = null
-
-const login = async () => {
- const response = await supabase.auth.signInWithPassword({
-  email: 'blanco.jimenez.1992@gmail.com',
-  password: '123456',
-  })
-  nuevoTask (response.data.user.id)
-}
 
 const nuevoTask = async (id) => {
     const response = await supabase.from('task')
