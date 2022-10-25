@@ -1,23 +1,37 @@
 import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', {
-    // arrow function recommended for full type inference
-    state: () => {
-        return {
-
-            isAuth: false,
-            id: undefined
-        }
-    },
+    state: () => ({
+        // Nos indicara si el usuario esta autenticado
+        isAuth: false,
+        // Guardaremos el id de supabase que nos dara al hacer el login
+        id: undefined
+    }),
     actions: {
-        login() {
+        /**
+         * Inicia la sesion del usuario
+         * @param {string} id 
+         */
+        login(id) {
+            this.isAuth = true
             this.id = id;
-            this.isAuth = true;
         },
 
-        logout(){
-            this.id = "";
+        /**
+         * Cierra la sesion del usuario
+         */
+        logout() {
+            this.id = undefined
             this.isAuth = false;
         }
-    }
+    },
+    persist: {
+        enabled: true,
+        strategies: [
+            {
+                key: 'auth',
+                storage: localStorage,
+            },
+        ],
+    },
 })

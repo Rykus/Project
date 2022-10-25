@@ -1,21 +1,43 @@
 <template>
     <h1>TABIEN</h1>
+
     <Taskcreate />
+    
+    <div v-for="data in titulitis" v-bind:key="data.id">
+        <Task :tarea="data"/>
+    </div>
+
     <button @click = "buttidOut"> aqui te sales :D</button>
     
 
 </template>
 
 <script setup>
-import {ref} from 'vue';
+import {onMounted, ref} from 'vue';
 import {logOut} from '../api/index.js' ;
 import {useAuthStore} from '../store/auth.js'
 import {useRouter} from 'vue-router'
 import Taskcreate from '../components/Taskcreate.vue'
+import Task from '../components/Task.vue'
+import {getTask} from '../api/index'
+import { objectToString } from '@vue/shared';
+
 
 const userOut = useAuthStore();
 const router = useRouter();
+const titulitis = ref();
 
+const ShowTask = async () =>{ 
+    const response = await getTask()
+    titulitis.value = await response
+    console.log (response)
+    console.log (titulitis)
+}
+
+
+onMounted ( async () => {
+    await ShowTask()
+})
 const buttidOut = async () => {
     const response = await logOut()
     
@@ -23,8 +45,14 @@ const buttidOut = async () => {
     userOut.logout()
     console.log('ha salido')
 }
+
 </script>
 
 <style scoped>
 
 </style>
+
+
+
+
+

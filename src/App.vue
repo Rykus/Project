@@ -25,47 +25,11 @@
 <script setup>
 import {createClient} from '@supabase/supabase-js'
 import { onMounted } from '@vue/runtime-core'
+import {useAuthStore} from './store/auth'
 
 const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_KEY)
 console.log(supabase)
-
-
-const nuevoTask = async (id) => {
-    const response = await supabase.from('task')
-        .insert({
-            user_id: id,
-            tittle: 'Titulo',
-            description: 'Descripcion del task'
-        })
-    console.log(response)
-}
-
-const getTask = async () => {
-  const response = await supabase
-  .from ('task')
-  .select ('*')
-  .order ('id',{ascending: false})
-}
-
-const updateTask = async () => {
-const response = await supabase
-  .from('task')
-  .update({
-    tittle: 'titulo modif',
-    description: 'Descripcion modif',
-  })
-  .eq('id', '1')
-} 
-
-
-const deleteTask = async () => {
-  const response = await subapase
-  .from ('task')
-  .delete()
-  .eq('id','1')
-}
-
-
+const auth = useAuthStore()
 onMounted(() => {
   //registro()
   //login()
