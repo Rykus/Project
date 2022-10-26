@@ -25,13 +25,10 @@
   <form @submit.prevent="" class="px-6 py-4">
     <input type="text" v-model ="tarea.tittle" placeholder = "¿Que quieres que te agobie OTRA VEZ?" class="font-bold text-xl mb-2">
     <input type="textarea" v-model ="tarea.description" placeholder ="Describe tu odio MAS PROFUNDO" class="text-gray-700 text-base">
-    <button type="submit" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"> MODIFICAR ENTRADA </button>
+    
   </form>
     <div class="px-6 pt-4 pb-2">
-    <button @click="completada" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"> completar </button>
-    <button @click="Show=!Show" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"> MODIFICAR </button>
-    <button @click="borrarTarea" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"> BORRAR :( </button>
-    <span  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{prop.tarea.created_at}}</span>
+    <button type="submit" @click="Show=!Show" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"> MODIFICAR ENTRADA </button>
     <span >{{prop.tarea.id}}</span>
   </div>
 </div>
