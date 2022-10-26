@@ -35,7 +35,15 @@ export const getTask = async () => {
 export const updateTask = async (taskId, task) => {
     const response = await supabase
     .from ('task')
-    .update (task)
+    .update ({ other_column: 'otherValue' })
+    .eq ('id',taskId)
+
+console.log (response)
+}
+export const updateComplete = async (taskId, Complete) => {
+    const response = await supabase
+    .from ('task')
+    .update ({ isCompleted: Complete })
     .eq ('id',taskId)
 
 console.log (response)
