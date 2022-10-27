@@ -8,7 +8,7 @@
 		<div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
 			<div class="max-w-md mx-auto">
 				<div>
-					<h1 class="text-2xl font-semibold">Entrando al Cyber Reino</h1>
+					<h1 class="text-2xl font-semibold">Creando Usuario</h1>
 				</div>
 				<div class="divide-y divide-gray-200">
 					<div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
@@ -25,9 +25,12 @@
 							<label for="password"  class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Confirm Password</label>
 						</div>
 						<div class="relative">
-							<button class="bg-blue-500 text-white rounded-md px-2 py-1">Acceso</button>
-						</div> <router-link :to="{name: 'Login'}" class="bg-blue-500 text-white rounded-md px-2 py-1">Inicia sesión</router-link>
-                        
+							<button class="bg-blue-500 text-white rounded-md px-2 py-1 mt-5">Acceso</button>
+						</div> 
+						<div class="relative">
+						
+						<router-link :to="{name: 'Login'}" class="bg-blue-500 text-white rounded-md px-2 py-1 mt-5">Inicia sesión</router-link>
+					</div>                        
 					</div>
 				</div>
 			</div>

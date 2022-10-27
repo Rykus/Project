@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 :root{
-    --textoprincipal: rgb(255, 0, 234);
-    --textosecundario: rgb(251, 255, 0);
+    --colordefondo: #000000;    
+    --colordebotones: #f2e900;
+    --letrabotones: #ff1111;
+    --letratexto: #007aff;
+    --fondotarjetas: #083e12;
+    --fondotarjetas2: #4a2152;
 
 
 
