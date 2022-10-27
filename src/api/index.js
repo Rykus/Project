@@ -32,10 +32,12 @@ export const getTask = async () => {
     return response.data
   }
 
-export const updateTask = async (taskId, task) => {
+export const updateTask = async (taskId,Nuevotitulo,Nuevadescrip) => {
     const response = await supabase
     .from ('task')
-    .update ({ other_column: 'otherValue' })
+    .update ({ tittle: Nuevotitulo,
+               description: Nuevadescrip
+                                       })
     .eq ('id',taskId)
 
 console.log (response)

@@ -17,8 +17,6 @@ import {useAuthStore} from '../store/auth'
 
 const store = useAuthStore()
 
-console.log(store.id,'sdasdsadsad')
-
     const tarea = ref ({
     user_id: store.id,
     tittle: "", 
@@ -27,8 +25,9 @@ console.log(store.id,'sdasdsadsad')
 
 const crearTarea = async () =>{
     console.log(tarea.value)
-const response = await newTask (tarea.value)
+    const response = await newTask (tarea.value)
     console.log (tarea.value)
+    
 }
 
 
