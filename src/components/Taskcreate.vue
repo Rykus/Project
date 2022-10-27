@@ -15,6 +15,8 @@ import {ref} from 'vue';
 import {newTask} from '../api/index'
 import {useAuthStore} from '../store/auth'
 
+
+const emits = defineEmits (['evento']);
 const store = useAuthStore()
 
     const tarea = ref ({
@@ -27,7 +29,7 @@ const crearTarea = async () =>{
     console.log(tarea.value)
     const response = await newTask (tarea.value)
     console.log (tarea.value)
-    
+    emits('evento')    
 }
 
 

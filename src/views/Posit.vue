@@ -1,10 +1,10 @@
 <template>
-    <h1>TABIEN</h1>
-
-    <Taskcreate />
+      
+    <navbar/>
+    <Taskcreate @evento="ShowTask"/>
    
     <div v-for="data in titulitis" v-bind:key="data.id">
-        <Task :tarea="data"/>
+        <Task @evento="ShowTask" :tarea="data"/>
     </div>
 
     <button @click = "buttidOut"> aqui te sales :D</button>
@@ -21,6 +21,7 @@ import Taskcreate from '../components/Taskcreate.vue'
 import Task from '../components/Task.vue'
 import {getTask} from '../api/index'
 import { objectToString } from '@vue/shared';
+import navbar from '../components/navbar.vue'
 
 const userOut = useAuthStore();
 const router = useRouter();

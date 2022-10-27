@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --textoprincipal: rgb(255, 0, 234);
+    --textosecundario: rgb(251, 255, 0);
+
+
+
+
+}
+

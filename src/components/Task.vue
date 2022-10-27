@@ -39,8 +39,11 @@
 import {updateComplete} from '../api/index'
 import {deleteTask} from '../api/index'
 import {ref} from 'vue'
-import {updateTask} from '../api/index'
+import {updateTask, getTask} from '../api/index';
 
+
+// CREADO POR SI FUNCIONA
+const emits = defineEmits (['evento']);
 
 const prop = defineProps({
     tarea: Object,
@@ -50,12 +53,10 @@ const prop = defineProps({
 const completada = async () => {
 prop.tarea.isCompleted=!prop.tarea.isCompleted
 const response = await updateComplete(prop.tarea.id,prop.tarea.isCompleted)
-emits ('evento')
+emits('evento')
 }
-// CREADO POR SI FUNCIONA
-const emits = defineEmits (['evento']);
 
-  
+
 
 
 const Show = ref(true)
@@ -65,13 +66,13 @@ const newDescripcion = ref()
 const ModificarTarea = async () =>{     
 Show.value=!Show.value
 const response = await updateTask(prop.tarea.id, newTitulo.value, newDescripcion.value)
-emits ('evento')    
+emits('evento')  
 }
 
 const borrarTarea = async () => {
- const response = await deleteTask(prop.tarea.id)
-    emits ('evento')
-  }
+const response = await deleteTask(prop.tarea.id)
+emits('evento')
+}
 
 </script>
 
