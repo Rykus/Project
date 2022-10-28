@@ -1,5 +1,5 @@
 <template>
-<nav id="header" class="w-full z-30 top-10 py-1 bg-yellow-100 shadow-lg border-b border-blue-400 mt-24">
+<nav id="header" class="glob w-full z-30 top-10 py-1 bg-yellow-100 shadow-lg border-b border-blue-400">
       <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
          <label for="menu-toggle" class="cursor-pointer md:hidden block">
             <svg class="fill-current text-blue-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
@@ -12,9 +12,7 @@
          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
             <nav>
                <ul class="md:flex items-center justify-between text-base text-blue-600 pt-4 md:pt-0">
-                  <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Home</a></li>
-                  <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Products</a></li>
-                  <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">About</a></li>
+                  <img src="../assets/Sin título.png" class="h-10" alt="">
                </ul>
             </nav>
          </div>
@@ -22,7 +20,7 @@
          <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
             <div class="auth flex items-center w-full md:w-full">
                 
-                <button @click = "buttidOut" class="bg-blue-600 text-gray-200  p-2 rounded  hover:bg-blue-500 hover:text-gray-100">Salir del Hielo</button>
+                <button @click = "buttidOut" class="buttoncolor buttonletters bg-blue-600 text-gray-200  p-2 rounded  hover:bg-blue-500 hover:text-gray-100">Salir del Hielo</button>
             </div>
          </div>
       </div>
@@ -49,8 +47,26 @@ const buttidOut = async () => {
 }
 </script>
 
-<style>
 
+<style>
+.backgroundcol{background: var(--colordefondo)}
+.buttoncolor{background: var(--colordebotones)}
+.buttonletters{color: var(--letrabotones)}
+.letterscolors{color: var(--letratexto)}
+.backgroundcards{background: var(--fondotarjetas)}
+.backgroundcards2{background: var(--fondotarjetas2)}
+.glop{
+	background-image: url(../assets/fondocard.jpg);
+	background-size: cover;
+}
+.glob{
+	background-image: url(../assets/fondobackground.jpg);
+	background-size: cover;
+}
+
+.margins{
+	margin-bottom: 10px !important;		
+}
 </style>
 
 

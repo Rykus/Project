@@ -1,16 +1,7 @@
 <template>
-<h1>Task App</h1>
-<ul>
-  <li>
-    <router-link :to="{name: 'Login'}">Inicio de sesión</router-link>
-  </li>
-  <li>
-    <router-link :to="{name: 'Singup'}">Registro de cuenta</router-link>
-  </li>
-  <li>
-    <router-link :to="{name: 'posit'}">Pagina de task</router-link>
-  </li>
-</ul>
+<body class="backgroundcol">
+
+</body>
 <router-view></router-view>
 </template>
 
@@ -29,5 +20,5 @@ const auth = useAuthStore()
 </script>
 
 <style scoped>
-
+.backgroundcol{background: var(--colordefondo)}
 </style>

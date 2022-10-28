@@ -1,11 +1,11 @@
 <template>
       <div class="max-w-sm rounded overflow-hidden shadow-lg">
    <div class="px-6 py-4">
-    <input type="text" v-model ="tarea.tittle" placeholder = "¿Que quieres que te agobie?" class="font-bold text-xl mb-2">
-    <input type="textarea" v-model ="tarea.description" placeholder ="Describe tu odio" class="text-gray-700 text-base">        
+    <input type="text" v-model ="tarea.tittle" placeholder = "Tipo de trabajo" class="font-bold text-xl mb-2">
+    <input type="textarea" v-model ="tarea.description" placeholder ="Describe el trabajo" class="text-gray-700 text-base">        
    </div>
   <div class="px-6 pt-4 pb-2">
-    <button  @click="crearTarea" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"> Crear </button>
+    <button  @click="crearTarea" class=" text-white rounded-md px-2 py-1 buttoncolor buttonletters"> Publicar </button>
   </div>
 </div>
 </template>
@@ -36,5 +36,19 @@ const crearTarea = async () =>{
 </script>
 
 <style scoped>
+.backgroundcol{background: var(--colordefondo)}
+.buttoncolor{background: var(--colordebotones)}
+.buttonletters{color: var(--letrabotones)}
+.letterscolors{color: var(--letratexto)}
+.backgroundcards{background: var(--fondotarjetas)}
+.backgroundcards2{background: var(--fondotarjetas2)}
+.glop{
+	background-image: url(../assets/fondocard.jpg);
+	background-size: cover;
+}
+.glob{
+	background-image: url(../assets/fondobackground.jpg);
+	background-size: cover;
+}
 
 </style>
