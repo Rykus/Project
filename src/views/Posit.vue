@@ -3,14 +3,14 @@
     <body class="glop flexi">
         
    
-    <div>
+    <div class="mt-10">
     <Taskcreate @evento="ShowTask"/>
    </div>
-    <div v-for="data in titulitis" v-bind:key="data.id">
+    <div v-for="data in titulitis" v-bind:key="data.id" class="mt-10">
         <Task @evento="ShowTask" :tarea="data"/>
     </div>
     </body>       
-
+<footer class="glob"></footer>
 </template>
 
 <script setup>
@@ -76,6 +76,7 @@ const buttidOut = async () => {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 </style>
 

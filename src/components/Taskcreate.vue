@@ -1,8 +1,9 @@
 <template>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg border-4 border-red-600 ">
    <div class="px-6 py-4">
-    <input type="text" v-model ="tarea.tittle" placeholder = "Tipo de trabajo" class="font-bold text-xl mb-2">
-    <input type="textarea" v-model ="tarea.description" placeholder ="Describe el trabajo" class="text-gray-700 text-base">        
+    <input type="text" v-model ="tarea.tittle" placeholder = "Tipo de trabajo" class="font-bold text-xl mb-2 buttoncolor buttonletters">
+    
+    <input type="textarea" v-model ="tarea.description" placeholder ="Describe el trabajo" class="text-gray-700 text-base buttoncolor buttonletters">        
    </div>
   <div class="px-6 pt-4 pb-2">
     <button  @click="crearTarea" class=" text-white rounded-md px-2 py-1 buttoncolor buttonletters"> Publicar </button>
