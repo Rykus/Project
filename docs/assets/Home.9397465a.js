@@ -1,0 +1,1 @@
+import{_ as o,r as _,o as c,c as t,a as s}from"./index.f617544b.js";const n={},r={class:"backgroundcol"};function a(d,l){const e=_("router-view");return c(),t("body",r,[s(e)])}const m=o(n,[["render",a],["__scopeId","data-v-0022105b"]]);export{m as default};
