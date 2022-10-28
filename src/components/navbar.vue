@@ -12,7 +12,7 @@
          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
             <nav>
                <ul class="md:flex items-center justify-between text-base text-blue-600 pt-4 md:pt-0">
-                  <img src="../assets/Sin título.png" class="h-10" alt="">
+                  <img src="../assets/afterlife.png" class="h-10" alt="">
                </ul>
             </nav>
          </div>
